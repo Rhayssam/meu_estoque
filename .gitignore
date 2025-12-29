@@ -1,4 +1,7 @@
 # Miscellaneous
+.env*
+!.env.example
+.vscode
 *.class
 *.log
 *.pyc
