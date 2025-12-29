@@ -19,12 +19,12 @@ class LoginPage extends StatelessWidget {
                   children: [
                     TextFormField(
                       decoration: InputDecoration(
-                        label: Text('data'),
+                        label: Text('Login'),
                       ),
                     ),
                     TextFormField(
                       decoration: InputDecoration(
-                        label: Text('data'),
+                        label: Text('Senha'),
                       ),
                     ),
                   ],
