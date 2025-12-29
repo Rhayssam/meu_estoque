@@ -3,6 +3,8 @@ import 'package:meu_estoque/routing/routes.dart';
 import 'package:meu_estoque/ui/auth/login/login_bindings.dart';
 import 'package:meu_estoque/ui/auth/login/login_page.dart';
 import 'package:meu_estoque/ui/dev/dev_page.dart';
+import 'package:meu_estoque/ui/home/home_bindings.dart';
+import 'package:meu_estoque/ui/home/home_page.dart';
 
 final class AppRouter {
   static final List<GetPage> pages = [
@@ -14,6 +16,11 @@ final class AppRouter {
       name: Routes.login,
       binding: LoginBindings(),
       page: () => LoginPage(),
+    ),
+    GetPage(
+      name: Routes.home,
+      binding: HomeBindings(),
+      page: () => HomePage(),
     ),
   ];
   static final GetPage unknownRoutePage = GetPage(
