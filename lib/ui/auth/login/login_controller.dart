@@ -69,7 +69,6 @@ class LoginController extends GetxController {
 
     if (failure is AuthException) {
       content = failure.extraMessages?.join('\n') ?? failure.message;
-      // ignore: dead_code
     } else if (failure is StorageException) {
       content = 'Houve um erro inesperado';
     }
