@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:meu_estoque/ui/auth/login/login_controller.dart';
+import 'package:meu_estoque/ui/auth/login/login_form.dart';
 import 'package:meu_estoque/ui/core/widgets/buttons/custom_button.dart';
 import 'package:meu_estoque/ui/core/widgets/double_click_to_exit/double_click_to_exit.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
+
+  LoginController get _controller => Get.find<LoginController>();
 
   @override
   Widget build(BuildContext context) {
@@ -15,28 +20,8 @@ class LoginPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Column(
-                spacing: 20,
-                children: [
-                  TextFormField(
-                    decoration: InputDecoration(
-                      label: Text('Login'),
-                    ),
-                  ),
-                  TextFormField(
-                    decoration: InputDecoration(
-                      label: Text('Senha'),
-                    ),
-                  ),
-                  SizedBox(
-                    width: double.infinity,
-                    child: CustomButton.primary(
-                      onPressed: () {},
-                      icon: Icon(Icons.login),
-                      label: Text('Login'),
-                    ),
-                  ),
-                ],
+              LoginForm(
+                controller: _controller,
               ),
             ],
           ),
