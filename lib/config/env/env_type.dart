@@ -1,4 +1,5 @@
 enum EnvType {
+  dev('DEV'),
   local('LOCAL')
   ;
 
