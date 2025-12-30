@@ -78,4 +78,24 @@ class AuthRepositoryMock implements AuthRepository {
       );
     }
   }
+
+  @override
+  Future<void> dispose() async {
+    await _authEvents.close();
+  }
+
+  @override
+  Stream<AuthEvent> get authEvents => _authEvents.stream;
+
+  @override
+  AsyncResult<bool> isAuthenticated() {
+    // TODO: implement isAuthenticated
+    throw UnimplementedError();
+  }
+
+  @override
+  AsyncResult<void> sessionExpired() {
+    // TODO: implement sessionExpired
+    throw UnimplementedError();
+  }
 }
