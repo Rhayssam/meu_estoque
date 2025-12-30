@@ -6,4 +6,10 @@ extension CustomButtonStyles on ThemeData {
     foregroundColor: colorScheme.onPrimary,
     iconColor: colorScheme.onPrimary,
   );
+
+  ButtonStyle get alertButtonStyle => ElevatedButton.styleFrom(
+    backgroundColor: colorScheme.error,
+    foregroundColor: colorScheme.onError,
+    iconColor: colorScheme.onError,
+  );
 }
