@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 import 'package:meu_estoque/config/env/env_type.dart';
-import 'package:meu_estoque/config/env/enviroment.dart';
+import 'package:meu_estoque/config/env/environment.dart';
 import 'package:meu_estoque/data/repositories/auth/auth_repository.dart';
 import 'package:meu_estoque/data/repositories/auth/auth_repository_impl.dart';
 import 'package:meu_estoque/data/repositories/auth/auth_repository_mock.dart';
