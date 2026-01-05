@@ -28,10 +28,7 @@ class AuthRepositoryMock implements AuthRepository {
   final StreamController<AuthEvent> _authEvents = StreamController<AuthEvent>.broadcast();
 
   @override
-  AsyncResult<UserModel> login({
-    required String email,
-    required String password,
-  }) async {
+  AsyncResult<UserModel> login({required String email, required String password}) async {
     try {
       final response = await _client.get<List<dynamic>>(
         '/login',
@@ -77,6 +74,14 @@ class AuthRepositoryMock implements AuthRepository {
         AuthException(message: 'Erro interno inesperado no mock'),
       );
     }
+  }
+
+  @override
+  AsyncResult<void> logout() async {
+    _log.info('Logout realizado com sucesso (mock)');
+    _tokenStorage.clear();
+    _authEvents.add(AuthLogoutEvent());
+    return Success({});
   }
 
   @override
