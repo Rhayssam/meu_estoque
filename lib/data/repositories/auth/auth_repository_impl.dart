@@ -96,4 +96,10 @@ class AuthRepositoryImpl implements AuthRepository {
     _authEvents.add(AuthSessionExpiredEvent());
     return Success({});
   }
+
+  @override
+  AsyncResult<void> logout() {
+    // TODO: implement logout
+    throw UnimplementedError();
+  }
 }
