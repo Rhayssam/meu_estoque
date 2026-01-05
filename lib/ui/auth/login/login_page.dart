@@ -17,9 +17,20 @@ class LoginPage extends StatelessWidget {
           child: CustomScrollView(
             physics: ScrollPhysics(),
             slivers: [
-              SliverToBoxAdapter(
-                child: Padding(
-                  padding: const EdgeInsets.all(20),
+              SliverPadding(
+                padding: EdgeInsetsGeometry.all(20),
+                sliver: SliverToBoxAdapter(
+                  child: Text(
+                    'Meu Estoque',
+                    style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ),
+              SliverPadding(
+                padding: EdgeInsets.symmetric(horizontal: 20),
+                sliver: SliverToBoxAdapter(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
