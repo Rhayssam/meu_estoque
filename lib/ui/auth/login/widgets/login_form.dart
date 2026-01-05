@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:meu_estoque/ui/auth/login/login_controller.dart';
+import 'package:meu_estoque/ui/auth/login/viewmodel/login_controller.dart';
 import 'package:validatorless/validatorless.dart';
 
 class LoginForm extends StatelessWidget {

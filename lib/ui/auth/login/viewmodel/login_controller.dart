@@ -9,7 +9,7 @@ import 'package:meu_estoque/data/repositories/auth/auth_repository.dart';
 import 'package:meu_estoque/data/services/local_storage/session/user_session_storage.dart';
 import 'package:meu_estoque/data/services/logger/logger.dart';
 import 'package:meu_estoque/domain/user_model.dart';
-import 'package:meu_estoque/ui/auth/login/login_states.dart';
+import 'package:meu_estoque/ui/auth/login/viewmodel/login_states.dart';
 import 'package:meu_estoque/ui/core/services/dialog_manager.dart';
 import 'package:meu_estoque/ui/core/services/loading_overlay_manager.dart';
 

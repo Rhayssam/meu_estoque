@@ -9,7 +9,7 @@ import 'package:meu_estoque/data/services/api/dio/client_http.dart';
 import 'package:meu_estoque/data/services/local_storage/session/user_session_storage.dart';
 import 'package:meu_estoque/data/services/local_storage/token_storage/token_storage.dart';
 import 'package:meu_estoque/data/services/logger/logger.dart';
-import 'package:meu_estoque/ui/auth/login/login_controller.dart';
+import 'package:meu_estoque/ui/auth/login/viewmodel/login_controller.dart';
 
 class LoginBindings implements Bindings {
   @override
