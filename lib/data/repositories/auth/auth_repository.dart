@@ -7,6 +7,7 @@ abstract interface class AuthRepository {
     required String email,
     required String password,
   });
+  AsyncResult<void> logout();
 
   AsyncResult<void> sessionExpired();
 
