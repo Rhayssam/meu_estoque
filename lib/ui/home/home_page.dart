@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:meu_estoque/ui/core/widgets/app_bar/custom_app_bar.dart';
-import 'package:meu_estoque/ui/home/widgets/home_drawer.dart';
+import 'package:meu_estoque/ui/home/widgets/drawer/home_drawer.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});

@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:meu_estoque/ui/core/services/dialog_manager.dart';
 import 'package:meu_estoque/ui/core/widgets/copyright/copyright.dart';
 import 'package:meu_estoque/ui/home/viewmodel/home_controller.dart';
-import 'package:meu_estoque/ui/home/widgets/drawer_option.dart';
+import 'package:meu_estoque/ui/home/widgets/drawer/drawer_option.dart';
 
 class HomeDrawer extends StatelessWidget {
   const HomeDrawer({
