@@ -19,24 +19,25 @@ class LoginPage extends StatelessWidget {
           child: CustomScrollView(
             physics: ScrollPhysics(),
             slivers: [
-              SliverPadding(
-                padding: EdgeInsetsGeometry.all(20),
-                sliver: SliverToBoxAdapter(
-                  child: Text(
-                    'Meu Estoque',
-                    style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-              ),
-              SliverPadding(
-                padding: EdgeInsets.symmetric(horizontal: 20),
-                sliver: SliverToBoxAdapter(
+              SliverFillRemaining(
+                hasScrollBody: false,
+                child: Padding(
+                  padding: EdgeInsets.all(20),
                   child: Column(
+                    spacing: 5,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
+                      Spacer(),
+                      Text(
+                        'MeuEstoque App',
+                        style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
                       Container(
                         alignment: Alignment.topLeft,
                         child: Text(
@@ -46,47 +47,50 @@ class LoginPage extends StatelessWidget {
                       ),
                       const SizedBox(height: 15),
                       LoginForm(controller: _controller),
+                      Container(
+                        alignment: Alignment.topRight,
+                        child: TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            'Esqueci minha senha',
+                            style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Spacer(),
+                      Column(
+                        spacing: 15,
+                        children: [
+                          Divider(
+                            height: 40,
+                            color: Theme.of(context).colorScheme.primaryFixed,
+                          ),
+                          SizedBox(
+                            width: double.infinity,
+                            child: CustomButton.primary(
+                              onPressed: () async {
+                                await _controller.login();
+                              },
+                              icon: Icon(Icons.login),
+                              label: Text('LOGIN'),
+                            ),
+                          ),
+                          SizedBox(
+                            width: double.infinity,
+                            child: CustomButton.tertiary(
+                              onPressed: () async {
+                                await _controller.login();
+                              },
+                              icon: Icon(Icons.person_add_alt_1_rounded),
+                              label: Text('CRIAR CONTA'),
+                            ),
+                          ),
+                          Copyright(),
+                        ],
+                      ),
                     ],
-                  ),
-                ),
-              ),
-              SliverFillRemaining(
-                hasScrollBody: false,
-                child: Padding(
-                  padding: EdgeInsets.only(left: 20, right: 20, bottom: 20),
-                  child: Align(
-                    alignment: Alignment.bottomCenter,
-                    child: Column(
-                      spacing: 15,
-                      children: [
-                        Spacer(),
-                        Divider(
-                          height: 40,
-                          color: Theme.of(context).colorScheme.primaryFixed,
-                        ),
-                        SizedBox(
-                          width: double.infinity,
-                          child: CustomButton.primary(
-                            onPressed: () async {
-                              await _controller.login();
-                            },
-                            icon: Icon(Icons.login),
-                            label: Text('LOGIN'),
-                          ),
-                        ),
-                        SizedBox(
-                          width: double.infinity,
-                          child: CustomButton.tertiary(
-                            onPressed: () async {
-                              await _controller.login();
-                            },
-                            icon: Icon(Icons.login),
-                            label: Text('LOGIN'),
-                          ),
-                        ),
-                        Copyright(),
-                      ],
-                    ),
                   ),
                 ),
               ),
