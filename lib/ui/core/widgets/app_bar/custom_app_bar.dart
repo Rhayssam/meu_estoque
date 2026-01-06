@@ -5,7 +5,9 @@ enum CustomAppBarThemeEnum {
   custom,
   primary,
   transparent,
+  primaryContainer,
   surface,
+  tertiaryFixed,
 }
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -33,12 +35,28 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   }) : customAppBarThemeEnum = CustomAppBarThemeEnum.primary,
        theme = null;
 
+  const CustomAppBar.primaryContainer({
+    super.key,
+    this.actions,
+    this.leading,
+    this.title,
+  }) : customAppBarThemeEnum = CustomAppBarThemeEnum.primaryContainer,
+       theme = null;
+
   const CustomAppBar.surface({
     super.key,
     this.actions,
     this.leading,
     this.title,
   }) : customAppBarThemeEnum = CustomAppBarThemeEnum.surface,
+       theme = null;
+
+  const CustomAppBar.tertiaryFixed({
+    super.key,
+    this.actions,
+    this.leading,
+    this.title,
+  }) : customAppBarThemeEnum = CustomAppBarThemeEnum.tertiaryFixed,
        theme = null;
 
   final CustomAppBarThemeEnum customAppBarThemeEnum;
@@ -52,7 +70,9 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       CustomAppBarThemeEnum.custom => theme,
       CustomAppBarThemeEnum.primary => Theme.of(context).primaryAppBarTheme,
       CustomAppBarThemeEnum.transparent => Theme.of(context).transparentAppBarTheme,
+      CustomAppBarThemeEnum.primaryContainer => Theme.of(context).primaryContainerAppBarTheme,
       CustomAppBarThemeEnum.surface => Theme.of(context).surfaceAppBarTheme,
+      CustomAppBarThemeEnum.tertiaryFixed => Theme.of(context).tertiaryFixedAppBarTheme,
     };
   }
 
