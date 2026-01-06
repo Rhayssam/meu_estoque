@@ -61,7 +61,7 @@ class LoginPage extends StatelessWidget {
                       ),
                       Spacer(),
                       Column(
-                        spacing: 15,
+                        spacing: 10,
                         children: [
                           Divider(
                             height: 40,
@@ -77,14 +77,13 @@ class LoginPage extends StatelessWidget {
                               label: Text('LOGIN'),
                             ),
                           ),
-                          SizedBox(
-                            width: double.infinity,
-                            child: CustomButton.tertiary(
-                              onPressed: () async {
-                                await _controller.login();
-                              },
-                              icon: Icon(Icons.person_add_alt_1_rounded),
-                              label: Text('CRIAR CONTA'),
+                          TextButton(
+                            onPressed: () {},
+                            child: Text(
+                              'CRIAR CONTA',
+                              style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                           Copyright(),
