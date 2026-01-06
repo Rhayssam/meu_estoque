@@ -9,7 +9,7 @@ class Copyright extends StatelessWidget {
       'Rhayssam © 2026',
       style: Theme.of(context).textTheme.labelMedium?.copyWith(
         fontStyle: FontStyle.italic,
-        color: Theme.of(context).colorScheme.primaryFixed.withValues(
+        color: Theme.of(context).colorScheme.secondaryFixed.withValues(
           alpha: .5,
         ),
       ),
