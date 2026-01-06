@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:meu_estoque/ui/core/widgets/app_bar/app_bar_back_button.dart';
 import 'package:meu_estoque/ui/core/widgets/app_bar/custom_app_bar.dart';
 import 'package:meu_estoque/ui/home/widgets/home_drawer.dart';
 
