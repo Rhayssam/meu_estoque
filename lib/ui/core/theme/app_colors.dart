@@ -1,17 +1,59 @@
 import 'package:flutter/material.dart';
 
 final class AppColors {
+  static final Color primaryFixed = Color(0xFFB7B7B7);
+  static final Color secondaryFixed = Color(0xFF484848);
+  static final Color onSecondaryFixed = Color(0xFFF9F9F9);
+  static final Color tertiaryFixed = Color(0xFF000000);
+  static final Color onTertiaryFixed = Color(0xFFFFFFFF);
+
   static final ColorScheme lightColorScheme = ColorScheme(
     brightness: Brightness.light,
-    primary: Color(0xFF0473F1),
-    onPrimary: Color(0xFFFFFFFF),
-    secondary: Color(0xFF59A2F5),
-    onSecondary: Color(0xFFFFFFFF),
-    error: Color(0xFFFF4E4E),
-    onError: Color(0xFFF9F9F9),
+    primaryFixed: primaryFixed,
+    secondaryFixed: secondaryFixed,
+    onSecondaryFixed: onSecondaryFixed,
+    tertiaryFixed: tertiaryFixed,
+    onTertiaryFixed: onTertiaryFixed,
+    surface: Color(0xFFF3F3F3),
+    onSurface: Color(0xFF000000),
+    primary: Color(0xFFFFD93F),
+    onPrimary: Color(0xFF121212),
+    secondary: Color(0xFFFFFFFF),
+    onSecondary: Color(0xFF000000),
+    tertiary: Color(0xFF000000),
+    onTertiary: Color(0xFFF9F9F9),
+    error: Color(0xFFFD0303),
+    onError: Color(0xFFFFFFFF),
     primaryContainer: Color(0xFFFFFFFF),
     onPrimaryContainer: Color(0xFF000000),
-    surface: Color(0xFFF3F3F3),
-    onSurface: Color(0XFF444444),
+    secondaryContainer: Color(0xFF121212),
+    onSecondaryContainer: Color(0xFFFFFFFF),
+    tertiaryContainer: Color(0xFFFFFFFF),
+    onTertiaryContainer: Color(0xFF000000),
+  );
+
+  static final ColorScheme darkColorScheme = ColorScheme(
+    brightness: Brightness.dark,
+    primaryFixed: primaryFixed,
+    secondaryFixed: secondaryFixed,
+    onSecondaryFixed: onSecondaryFixed,
+    tertiaryFixed: tertiaryFixed,
+    onTertiaryFixed: onTertiaryFixed,
+    surface: Color(0xFF171717),
+    onSurface: Color(0xFFF9F9F9),
+    primary: Color(0xFFFFD93F),
+    onPrimary: Color(0xFF000000),
+    secondary: Color(0xFF121212),
+    onSecondary: Color(0xFFF9F9F9),
+    tertiary: Color(0xFFF9F9F9),
+    onTertiary: Color(0xFF121212),
+    error: Color(0xFFFF4E4E),
+    onError: Color(0xFFF9F9F9),
+    primaryContainer: Color(0xFF2A2A2A),
+    onPrimaryContainer: Color(0xFFF9F9F9),
+    secondaryContainer: Color(0xFFFFD93F),
+    onSecondaryContainer: Color(0xFF121212),
+    tertiaryContainer: Color(0xFF000000),
+    onTertiaryContainer: Color(0xFFFFFFFF),
   );
 }
