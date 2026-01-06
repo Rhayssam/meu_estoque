@@ -4,6 +4,8 @@ import 'package:meu_estoque/ui/core/widgets/buttons/custom_button_styles.dart';
 enum CustomButtonStyleEnum {
   custom,
   primary,
+  secondary,
+  tertiary,
   alert,
 }
 
@@ -33,6 +35,24 @@ class CustomButton extends StatelessWidget {
   }) : customButtonStyleEnum = CustomButtonStyleEnum.primary,
        style = null;
 
+  const CustomButton.secondary({
+    super.key,
+    required this.onPressed,
+    required this.label,
+    this.icon,
+    this.iconAlignment = IconAlignment.start,
+  }) : customButtonStyleEnum = CustomButtonStyleEnum.secondary,
+       style = null;
+
+  const CustomButton.tertiary({
+    super.key,
+    required this.onPressed,
+    required this.label,
+    this.icon,
+    this.iconAlignment = IconAlignment.start,
+  }) : customButtonStyleEnum = CustomButtonStyleEnum.tertiary,
+       style = null;
+
   const CustomButton.alert({
     super.key,
     required this.onPressed,
@@ -46,6 +66,8 @@ class CustomButton extends StatelessWidget {
     return switch (customButtonStyleEnum) {
       CustomButtonStyleEnum.custom => style,
       CustomButtonStyleEnum.primary => Theme.of(context).primaryButtonStyle,
+      CustomButtonStyleEnum.secondary => Theme.of(context).secondaryButtonStyle,
+      CustomButtonStyleEnum.tertiary => Theme.of(context).tertiaryButtonStyle,
       CustomButtonStyleEnum.alert => Theme.of(context).alertButtonStyle,
     };
   }
