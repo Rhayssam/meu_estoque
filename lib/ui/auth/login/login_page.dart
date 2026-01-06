@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:meu_estoque/ui/auth/login/viewmodel/login_controller.dart';
 import 'package:meu_estoque/ui/auth/login/widgets/login_form.dart';
+import 'package:meu_estoque/ui/core/widgets/buttons/custom_button.dart';
+import 'package:meu_estoque/ui/core/widgets/copyright/copyright.dart';
 import 'package:meu_estoque/ui/core/widgets/double_click_to_exit/double_click_to_exit.dart';
 
 class LoginPage extends StatelessWidget {
@@ -55,6 +57,7 @@ class LoginPage extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.bottomCenter,
                     child: Column(
+                      spacing: 15,
                       children: [
                         Spacer(),
                         Divider(
@@ -63,7 +66,7 @@ class LoginPage extends StatelessWidget {
                         ),
                         SizedBox(
                           width: double.infinity,
-                          child: ElevatedButton.icon(
+                          child: CustomButton.primary(
                             onPressed: () async {
                               await _controller.login();
                             },
@@ -71,7 +74,17 @@ class LoginPage extends StatelessWidget {
                             label: Text('LOGIN'),
                           ),
                         ),
-                        const SizedBox(height: 20),
+                        SizedBox(
+                          width: double.infinity,
+                          child: CustomButton.tertiary(
+                            onPressed: () async {
+                              await _controller.login();
+                            },
+                            icon: Icon(Icons.login),
+                            label: Text('LOGIN'),
+                          ),
+                        ),
+                        Copyright(),
                       ],
                     ),
                   ),
