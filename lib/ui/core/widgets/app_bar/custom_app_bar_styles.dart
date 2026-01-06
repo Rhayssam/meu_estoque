@@ -19,6 +19,25 @@ extension CustomAppBarStyles on ThemeData {
     elevation: 0,
   );
 
+  AppBarTheme get primaryContainerAppBarTheme => AppBarTheme(
+    backgroundColor: colorScheme.primaryContainer,
+    foregroundColor: colorScheme.onPrimaryContainer,
+    surfaceTintColor: colorScheme.primaryContainer,
+    centerTitle: true,
+    shadowColor: colorScheme.shadow.withValues(alpha: 0.5),
+    iconTheme: iconTheme.copyWith(
+      color: colorScheme.onPrimaryContainer,
+    ),
+    actionsIconTheme: iconTheme.copyWith(
+      color: colorScheme.onPrimaryContainer,
+    ),
+    titleTextStyle: textTheme.titleLarge?.copyWith(
+      fontWeight: FontWeight.normal,
+      color: colorScheme.onPrimaryContainer,
+    ),
+    elevation: 2,
+  );
+
   AppBarTheme get transparentAppBarTheme => AppBarTheme(
     backgroundColor: Colors.transparent,
     surfaceTintColor: Colors.transparent,
@@ -52,6 +71,25 @@ extension CustomAppBarStyles on ThemeData {
     titleTextStyle: textTheme.titleLarge?.copyWith(
       fontWeight: FontWeight.normal,
       color: colorScheme.onSurface,
+    ),
+    elevation: 0,
+  );
+
+  AppBarTheme get tertiaryFixedAppBarTheme => AppBarTheme(
+    backgroundColor: colorScheme.tertiaryFixed,
+    foregroundColor: colorScheme.onTertiaryFixed,
+    surfaceTintColor: colorScheme.tertiaryFixed,
+    centerTitle: true,
+    shadowColor: colorScheme.shadow.withValues(alpha: 0.5),
+    iconTheme: iconTheme.copyWith(
+      color: colorScheme.onTertiaryFixed,
+    ),
+    actionsIconTheme: iconTheme.copyWith(
+      color: colorScheme.onTertiaryFixed,
+    ),
+    titleTextStyle: textTheme.titleLarge?.copyWith(
+      fontWeight: FontWeight.normal,
+      color: colorScheme.onTertiaryFixed,
     ),
     elevation: 0,
   );
