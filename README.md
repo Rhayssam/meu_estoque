@@ -2,6 +2,10 @@
 
 Aplicativo pessoal para controle de estoque
 
+## Objetivo
+
+Solução viável na palma da mão para controlar o estoque de produtos
+
 ## Ferramentas utilizadas
 
 | Ferramenta       | Versão           |
