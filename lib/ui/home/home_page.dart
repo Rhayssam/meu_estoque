@@ -15,7 +15,7 @@ class HomePage extends StatelessWidget {
       child: SafeArea(
         child: Scaffold(
           drawer: HomeDrawer(),
-          appBar: CustomAppBar.primary(
+          appBar: CustomAppBar.tertiaryFixed(
             title: const Text('HomePage'),
             leading: Builder(
               builder: (context) {
