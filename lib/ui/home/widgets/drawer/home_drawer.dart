@@ -46,7 +46,7 @@ class HomeDrawer extends StatelessWidget {
     final drawerOptions = _getDrawerOptions(context);
 
     return Drawer(
-      backgroundColor: Theme.of(context).colorScheme.primary,
+      backgroundColor: Theme.of(context).colorScheme.tertiaryFixed,
       width: double.infinity,
       child: SafeArea(
         child: CustomScrollView(
