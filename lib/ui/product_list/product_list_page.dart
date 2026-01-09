@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class CompanyListPage extends StatelessWidget {
-  const CompanyListPage({super.key});
+class ProductListPage extends StatelessWidget {
+  const ProductListPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('CompaniesPage'),
+        title: const Text('ProductsListPage'),
       ),
       body: Container(),
     );
