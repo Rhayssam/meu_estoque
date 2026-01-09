@@ -4,6 +4,8 @@ import 'package:meu_estoque/ui/about_us/about_us_bindings.dart';
 import 'package:meu_estoque/ui/about_us/about_us_page.dart';
 import 'package:meu_estoque/ui/auth/login/login_bindings.dart';
 import 'package:meu_estoque/ui/auth/login/login_page.dart';
+import 'package:meu_estoque/ui/company_list/company_list_bindings.dart';
+import 'package:meu_estoque/ui/company_list/company_list_page.dart';
 import 'package:meu_estoque/ui/dev/dev_page.dart';
 import 'package:meu_estoque/ui/home/home_bindings.dart';
 import 'package:meu_estoque/ui/home/home_page.dart';
@@ -28,6 +30,11 @@ final class AppRouter {
       name: Routes.about,
       binding: AboutUsBindings(),
       page: () => AboutUsPage(),
+    ),
+    GetPage(
+      name: Routes.companyList,
+      binding: CompanyListBindings(),
+      page: () => CompanyListPage(),
     ),
   ];
   static final GetPage unknownRoutePage = GetPage(
