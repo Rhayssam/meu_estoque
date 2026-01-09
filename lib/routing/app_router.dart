@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 import 'package:meu_estoque/routing/routes.dart';
+import 'package:meu_estoque/ui/about_us/about_us_bindings.dart';
+import 'package:meu_estoque/ui/about_us/about_us_page.dart';
 import 'package:meu_estoque/ui/auth/login/login_bindings.dart';
 import 'package:meu_estoque/ui/auth/login/login_page.dart';
 import 'package:meu_estoque/ui/dev/dev_page.dart';
@@ -21,6 +23,11 @@ final class AppRouter {
       name: Routes.home,
       binding: HomeBindings(),
       page: () => HomePage(),
+    ),
+    GetPage(
+      name: Routes.about,
+      binding: AboutUsBindings(),
+      page: () => AboutUsPage(),
     ),
   ];
   static final GetPage unknownRoutePage = GetPage(
