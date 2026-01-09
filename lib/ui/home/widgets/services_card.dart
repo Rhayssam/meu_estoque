@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:meu_estoque/domain/enums/services_enum.dart';
 import 'package:meu_estoque/domain/extensions/services_extensions.dart';
 
-class CompanyServiceCard extends StatelessWidget {
-  const CompanyServiceCard({
+class ServicesCard extends StatelessWidget {
+  const ServicesCard({
     super.key,
     required this.service,
     required this.onTap,
