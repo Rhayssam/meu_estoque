@@ -9,7 +9,7 @@ import 'package:meu_estoque/data/repositories/auth/auth_repository.dart';
 import 'package:meu_estoque/data/services/api/dio/client_http.dart';
 import 'package:meu_estoque/data/services/local_storage/token_storage/token_storage.dart';
 import 'package:meu_estoque/data/services/logger/logger.dart';
-import 'package:meu_estoque/domain/user_model.dart';
+import 'package:meu_estoque/domain/models/user_model.dart';
 import 'package:result_dart/result_dart.dart';
 
 class AuthRepositoryMock implements AuthRepository {

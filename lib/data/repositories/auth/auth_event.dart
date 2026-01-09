@@ -1,4 +1,4 @@
-import 'package:meu_estoque/domain/user_model.dart';
+import 'package:meu_estoque/domain/models/user_model.dart';
 
 sealed class AuthEvent {
   const AuthEvent();

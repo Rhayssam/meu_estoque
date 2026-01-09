@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:get/get.dart';
 import 'package:meu_estoque/data/repositories/auth/auth_event.dart';
 import 'package:meu_estoque/data/repositories/auth/auth_repository.dart';
-import 'package:meu_estoque/domain/user_model.dart';
+import 'package:meu_estoque/domain/models/user_model.dart';
 import 'package:meu_estoque/routing/routes.dart';
 import 'package:meu_estoque/ui/core/services/dialog_manager.dart';
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meu_estoque/data/services/local_storage/shared_preferences/shared_preferences_local_storage.dart';
-import 'package:meu_estoque/domain/user_model.dart';
+import 'package:meu_estoque/domain/models/user_model.dart';
 
 class UserSessionStorage {
   final SharedPreferencesLocalStorage _storage;
