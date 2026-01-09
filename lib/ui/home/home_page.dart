@@ -40,6 +40,23 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
               ),
+              SliverPadding(
+                padding: EdgeInsetsGeometry.all(20),
+                sliver: SliverToBoxAdapter(
+                  child: Column(
+                    children: [
+                      Column(
+                        children: [
+                          Text(
+                            'Opções',
+                            style: Theme.of(context).textTheme.headlineSmall,
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
         ),
