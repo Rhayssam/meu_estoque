@@ -4,6 +4,8 @@ import 'package:meu_estoque/ui/about_us/about_us_bindings.dart';
 import 'package:meu_estoque/ui/about_us/about_us_page.dart';
 import 'package:meu_estoque/ui/auth/login/login_bindings.dart';
 import 'package:meu_estoque/ui/auth/login/login_page.dart';
+import 'package:meu_estoque/ui/inventory/inventory_bindings.dart';
+import 'package:meu_estoque/ui/inventory/inventory_page.dart';
 import 'package:meu_estoque/ui/product_list/product_list_bindings.dart';
 import 'package:meu_estoque/ui/product_list/product_list_page.dart';
 import 'package:meu_estoque/ui/dev/dev_page.dart';
@@ -42,6 +44,11 @@ final class AppRouter {
       name: Routes.sales,
       binding: SalesBindings(),
       page: () => SalesPage(),
+    ),
+    GetPage(
+      name: Routes.inventory,
+      binding: InventoryBindings(),
+      page: () => InventoryPage(),
     ),
   ];
   static final GetPage unknownRoutePage = GetPage(
