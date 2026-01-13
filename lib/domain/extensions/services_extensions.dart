@@ -5,5 +5,6 @@ extension ServicesExtensions on ServicesEnum {
   IconData get icon => switch (this) {
     ServicesEnum.products => Icons.toys,
     ServicesEnum.sales => Icons.sell,
+    ServicesEnum.inventory => Icons.inventory,
   };
 }
