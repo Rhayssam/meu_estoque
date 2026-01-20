@@ -18,37 +18,96 @@ class HomePage extends StatelessWidget {
       value: const SystemUiOverlayStyle(
         statusBarIconBrightness: Brightness.light,
       ),
-      child: SafeArea(
-        child: Scaffold(
-          drawer: HomeDrawer(),
-          body: CustomScrollView(
-            scrollDirection: Axis.vertical,
-            physics: const AlwaysScrollableScrollPhysics(),
-            slivers: [
-              CustomSliverAppBar.tertiaryFixed(
-                title: const Text('MeuEstoque App'),
-                leading: Builder(
-                  builder: (context) {
-                    return IconButton(
-                      icon: const Icon(Icons.menu),
-                      onPressed: () {
-                        Scaffold.of(context).openDrawer();
-                      },
-                    );
-                  },
+      child: Scaffold(
+        drawer: HomeDrawer(),
+        body: CustomScrollView(
+          scrollDirection: Axis.vertical,
+          physics: const AlwaysScrollableScrollPhysics(),
+          slivers: [
+            CustomSliverAppBar.surface(
+              title: const Text('MeuEstoque App'),
+              leading: Builder(
+                builder: (context) {
+                  return IconButton(
+                    icon: const Icon(Icons.menu),
+                    onPressed: () {
+                      Scaffold.of(context).openDrawer();
+                    },
+                  );
+                },
+              ),
+            ),
+            // SliverToBoxAdapter(
+            //   child: HomeHeader(),
+            // ),
+            SliverPadding(
+              padding: EdgeInsetsGeometry.all(20),
+              sliver: SliverToBoxAdapter(
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Theme.of(context).colorScheme.primaryContainer,
+                    borderRadius: BorderRadius.all(Radius.circular(15)),
+
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withValues(alpha: 0.1),
+                        blurRadius: 5,
+                        offset: Offset(0, 2),
+                      ),
+                    ],
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8),
+                    child: Column(
+                      spacing: 5,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Center(
+                          child: Text(
+                            'DASHBOARD',
+                            style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        Divider(
+                          color: Theme.of(context).colorScheme.primaryFixed.withAlpha(70),
+                        ),
+                        Text('Vendas da semana: '),
+                        Text('Vendas do mês: '),
+                      ],
+                    ),
+                  ),
                 ),
               ),
-              SliverToBoxAdapter(
-                child: HomeHeader(),
-              ),
-              SliverPadding(
-                padding: EdgeInsetsGeometry.all(20),
-                sliver: SliverToBoxAdapter(
-                  child: Services(controller: _controller),
+            ),
+            SliverPadding(
+              padding: EdgeInsetsGeometry.symmetric(horizontal: 20),
+              sliver: SliverToBoxAdapter(
+                child: Divider(
+                  color: Theme.of(context).colorScheme.primaryFixed.withAlpha(70),
                 ),
               ),
-            ],
-          ),
+            ),
+            SliverPadding(
+              padding: EdgeInsetsGeometry.symmetric(horizontal: 20),
+              sliver: SliverToBoxAdapter(
+                child: Text('Data'),
+              ),
+            ),
+            SliverPadding(
+              padding: EdgeInsetsGeometry.symmetric(horizontal: 20),
+              sliver: SliverToBoxAdapter(
+                child: Divider(
+                  color: Theme.of(context).colorScheme.primaryFixed.withAlpha(70),
+                ),
+              ),
+            ),
+            SliverPadding(
+              padding: EdgeInsetsGeometry.all(20),
+              sliver: SliverToBoxAdapter(
+                child: Services(controller: _controller),
+              ),
+            ),
+          ],
         ),
       ),
     );
