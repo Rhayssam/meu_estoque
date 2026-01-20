@@ -7,59 +7,51 @@ class ServicesCard extends StatelessWidget {
     super.key,
     required this.service,
     required this.onTap,
+    this.size = 120,
   });
 
   final ServicesEnum service;
   final void Function(ServicesEnum service) onTap;
+  final double size;
 
   @override
   Widget build(BuildContext context) {
+    final ThemeData theme = Theme.of(context);
     return InkWell(
-      borderRadius: BorderRadius.all(Radius.circular(22)),
+      borderRadius: BorderRadius.circular(22),
       onTap: () => onTap(service),
       child: Container(
-        padding: EdgeInsets.all(13),
+        width: size,
+        height: size,
+        padding: const EdgeInsets.all(14),
         decoration: BoxDecoration(
-          color: Theme.of(context).colorScheme.tertiaryContainer,
-          borderRadius: BorderRadius.all(Radius.circular(22)),
+          color: theme.colorScheme.tertiaryContainer,
+          borderRadius: BorderRadius.circular(22),
           boxShadow: [
             BoxShadow(
               color: Colors.black.withValues(alpha: 0.1),
               blurRadius: 5,
-              offset: Offset(0, 2),
+              offset: const Offset(0, 2),
             ),
           ],
         ),
-        width: double.infinity,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(12)),
-                color: Theme.of(context).colorScheme.primary,
-              ),
-              child: Padding(
-                padding: const EdgeInsets.all(10),
-                child: Icon(
-                  color: Theme.of(context).colorScheme.onPrimary,
-                  service.icon,
-                  size: 40,
-                ),
-              ),
+            Icon(
+              service.icon,
+              size: 50,
+              color: theme.colorScheme.onPrimary,
             ),
-            const SizedBox(width: 15),
-            Expanded(
-              child: Text(
-                service.label,
-                overflow: TextOverflow.ellipsis,
-                maxLines: 2,
-                textAlign: TextAlign.start,
-                style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                  fontWeight: FontWeight.bold,
-                  color: Theme.of(context).colorScheme.onTertiaryContainer,
-                ),
+            const SizedBox(height: 12),
+            Text(
+              service.label,
+              textAlign: TextAlign.center,
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
+              style: theme.textTheme.titleMedium!.copyWith(
+                fontWeight: FontWeight.bold,
+                color: theme.colorScheme.onTertiaryContainer,
               ),
             ),
           ],
