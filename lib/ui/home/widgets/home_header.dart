@@ -11,7 +11,7 @@ class HomeHeader extends StatelessWidget {
     return Container(
       width: double.infinity,
       decoration: BoxDecoration(
-        color: Theme.of(context).colorScheme.tertiaryFixed,
+        color: Theme.of(context).colorScheme.surface,
         boxShadow: [
           BoxShadow(
             color: Theme.of(context).colorScheme.shadow.withValues(alpha: 0.16),
@@ -32,7 +32,9 @@ class HomeHeader extends StatelessWidget {
           spacing: 10,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Greetings(),
+            Center(
+              child: Greetings(),
+            ),
           ],
         ),
       ),
