@@ -10,7 +10,7 @@ class HomeDrawer extends StatelessWidget {
     super.key,
   });
 
-  HomeController get _homeController => Get.find<HomeController>();
+  HomeController get _controller => Get.find<HomeController>();
 
   Future<bool?> _logoutConfirm(BuildContext context) {
     return DialogManager.of(context).showConfirmDialog<bool>(
@@ -35,7 +35,13 @@ class HomeDrawer extends StatelessWidget {
         icon: Icons.settings,
         onTap: () {},
       ),
-      DrawerOption(title: 'Sobre', icon: Icons.info, onTap: () {}),
+      DrawerOption(
+        title: 'Sobre',
+        icon: Icons.info,
+        onTap: () {
+          _controller.goToAboutUsPage();
+        },
+      ),
     ];
 
     return drawerOptions;
