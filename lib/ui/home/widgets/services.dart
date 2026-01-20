@@ -15,29 +15,26 @@ class Services extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      spacing: 20,
-      children: [
-        Align(
-          alignment: Alignment.centerLeft,
-          child: Text(
-            'Serviços',
-            style: Theme.of(context).textTheme.headlineSmall,
-          ),
-        ),
-        for (final service in ServicesEnum.values)
-          ServicesCard(
-            service: service,
-            onTap: (service) {
-              if (_controller.state is HomeLoadingCompaniesState) {
-                return;
-              }
-              Get.toNamed(
-                service.route,
-              );
-            },
-          ),
-      ],
+    return GridView.builder(
+      shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
+      itemCount: ServicesEnum.values.length,
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 2,
+        mainAxisSpacing: 20,
+        crossAxisSpacing: 20,
+        childAspectRatio: 1,
+      ),
+      itemBuilder: (context, index) {
+        final service = ServicesEnum.values[index];
+        return ServicesCard(
+          service: service,
+          onTap: (service) {
+            if (_controller.state is HomeLoadingCompaniesState) return;
+            Get.toNamed(service.route);
+          },
+        );
+      },
     );
   }
 }
