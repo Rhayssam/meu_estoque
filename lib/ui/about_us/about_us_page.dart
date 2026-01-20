@@ -9,11 +9,11 @@ class AboutUsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: CustomScrollView(
+    return Scaffold(
+      body: SafeArea(
+        child: CustomScrollView(
           slivers: [
-            CustomSliverAppBar.tertiaryFixed(
+            CustomSliverAppBar.surface(
               title: Text('Sobre Nós'),
               leading: AppBarBackButton(onPressed: Get.back),
             ),
