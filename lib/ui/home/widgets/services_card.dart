@@ -38,10 +38,14 @@ class ServicesCard extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(
-              service.icon,
-              size: 50,
-              color: theme.colorScheme.onPrimaryContainer,
+            CircleAvatar(
+              backgroundColor: theme.colorScheme.primaryFixed.withAlpha(40),
+              radius: 40,
+              child: Icon(
+                service.icon,
+                size: 50,
+                color: theme.colorScheme.onPrimaryContainer,
+              ),
             ),
             const SizedBox(height: 12),
             Text(
