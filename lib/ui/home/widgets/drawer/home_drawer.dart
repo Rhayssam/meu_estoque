@@ -46,8 +46,7 @@ class HomeDrawer extends StatelessWidget {
     final drawerOptions = _getDrawerOptions(context);
 
     return Drawer(
-      backgroundColor: Theme.of(context).colorScheme.tertiaryFixed,
-      width: double.infinity,
+      backgroundColor: Theme.of(context).colorScheme.surface,
       child: SafeArea(
         child: CustomScrollView(
           slivers: [
@@ -64,7 +63,7 @@ class HomeDrawer extends StatelessWidget {
                       },
                       icon: Icon(
                         Icons.close,
-                        color: Theme.of(context).colorScheme.onTertiaryFixed,
+                        color: Theme.of(context).colorScheme.onSurface,
                       ),
                     ),
                   ],
