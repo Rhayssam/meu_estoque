@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:get/get.dart';
+import 'package:meu_estoque/routing/routes.dart';
 import 'package:meu_estoque/ui/home/viewmodel/home_states.dart';
 
 class HomeController extends GetxController {
@@ -13,5 +14,9 @@ class HomeController extends GetxController {
   void onInit() async {
     _homeState.bindStream(_homeStateController.stream);
     super.onInit();
+  }
+
+  void goToAboutUsPage() {
+    Get.toNamed(Routes.about);
   }
 }
