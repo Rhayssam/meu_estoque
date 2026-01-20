@@ -25,7 +25,7 @@ class ServicesCard extends StatelessWidget {
         height: size,
         padding: const EdgeInsets.all(14),
         decoration: BoxDecoration(
-          color: theme.colorScheme.tertiaryContainer,
+          color: theme.colorScheme.primaryContainer,
           borderRadius: BorderRadius.circular(22),
           boxShadow: [
             BoxShadow(
@@ -41,7 +41,7 @@ class ServicesCard extends StatelessWidget {
             Icon(
               service.icon,
               size: 50,
-              color: theme.colorScheme.onPrimary,
+              color: theme.colorScheme.onPrimaryContainer,
             ),
             const SizedBox(height: 12),
             Text(
