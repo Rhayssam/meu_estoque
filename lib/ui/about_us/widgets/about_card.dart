@@ -24,7 +24,6 @@ class AboutCard extends StatelessWidget {
           ),
         ],
         borderRadius: BorderRadius.all(Radius.circular(15)),
-        border: Border.all(color: Theme.of(context).colorScheme.onPrimaryContainer),
       ),
       child: Padding(
         padding: const EdgeInsets.all(10),
