@@ -13,7 +13,7 @@ class DrawerOption extends StatelessWidget {
     return ListTile(
       title: Text(
         title,
-        style: TextStyle(color: Theme.of(context).colorScheme.onTertiaryFixed),
+        style: TextStyle(color: Theme.of(context).colorScheme.onSurface),
       ),
       leading: CircleAvatar(
         radius: 15,
