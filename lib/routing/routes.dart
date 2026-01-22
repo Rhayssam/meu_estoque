@@ -4,6 +4,7 @@ final class Routes {
   static const String home = '/home';
   static const String about = '/about';
   static const String productList = '/product/list';
+  static const String productAdd = '/product/add';
   static const String sales = '/sales';
   static const String inventory = '/inventory';
 
