@@ -21,7 +21,9 @@ class ProductListPage extends StatelessWidget {
         iconColor: theme.colorScheme.surface,
         textColor: theme.colorScheme.surface,
         scrollController: _controller.fabScrollController,
-        onPressed: (_) {},
+        onPressed: (_) {
+          _controller.goToProductAddPage();
+        },
       ),
       body: CustomScrollView(
         slivers: [
