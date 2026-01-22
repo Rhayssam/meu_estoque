@@ -6,6 +6,8 @@ import 'package:meu_estoque/ui/auth/login/login_bindings.dart';
 import 'package:meu_estoque/ui/auth/login/login_page.dart';
 import 'package:meu_estoque/ui/inventory/inventory_bindings.dart';
 import 'package:meu_estoque/ui/inventory/inventory_page.dart';
+import 'package:meu_estoque/ui/product_add/product_add_bindings.dart';
+import 'package:meu_estoque/ui/product_add/product_add_page.dart';
 import 'package:meu_estoque/ui/product_list/product_list_bindings.dart';
 import 'package:meu_estoque/ui/product_list/product_list_page.dart';
 import 'package:meu_estoque/ui/dev/dev_page.dart';
@@ -39,6 +41,11 @@ final class AppRouter {
       name: Routes.productList,
       binding: ProductListBindings(),
       page: () => ProductListPage(),
+    ),
+    GetPage(
+      name: Routes.productAdd,
+      binding: ProductAddBindings(),
+      page: () => ProductAddPage(),
     ),
     GetPage(
       name: Routes.sales,
