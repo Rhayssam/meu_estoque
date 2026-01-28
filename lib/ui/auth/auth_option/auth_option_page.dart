@@ -7,11 +7,33 @@ class AuthOptionPage extends GetView<AuthOptionController> {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final avatarRadius = screenWidth * 0.20;
+
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('AuthOptionPage'),
+      body: SafeArea(
+        child: Center(
+          child: Column(
+            spacing: 15,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              CircleAvatar(
+                radius: avatarRadius,
+                backgroundColor: Theme.of(context).colorScheme.primary,
+                child: Icon(
+                  Icons.person,
+                  size: avatarRadius,
+                  color: Theme.of(context).colorScheme.onPrimary,
+                ),
+              ),
+              Text(
+                'Bem vindo(a)!',
+                style: Theme.of(context).textTheme.displaySmall,
+              ),
+            ],
+          ),
+        ),
       ),
-      body: Container(),
     );
   }
 }
