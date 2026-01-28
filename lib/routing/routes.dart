@@ -1,6 +1,8 @@
 final class Routes {
   static const String dev = '/dev';
-  static const String login = '/login';
+  static const String authOptions = '/auth/options';
+  static const String login = '/auth/login';
+  static const String register = '/auth/register';
   static const String home = '/home';
   static const String about = '/about';
   static const String productList = '/product/list';
