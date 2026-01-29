@@ -19,12 +19,19 @@ import 'package:meu_estoque/ui/home/home_bindings.dart';
 import 'package:meu_estoque/ui/home/home_page.dart';
 import 'package:meu_estoque/ui/sales/sales_bindings.dart';
 import 'package:meu_estoque/ui/sales/sales_page.dart';
+import 'package:meu_estoque/ui/splash/splash_bindings.dart';
+import 'package:meu_estoque/ui/splash/splash_page.dart';
 
 final class AppRouter {
   static final List<GetPage> pages = [
     GetPage(
       name: Routes.dev,
       page: () => DevPage(),
+    ),
+    GetPage(
+      name: Routes.splash,
+      binding: SplashBindings(),
+      page: () => SplashPage(),
     ),
     GetPage(
       name: Routes.authOptions,
