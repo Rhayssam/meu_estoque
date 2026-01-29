@@ -12,7 +12,39 @@ class RegisterPage extends GetView<RegisterController> {
         title: const Text('RegisterPage'),
       ),
       body: SafeArea(
-        child: CustomScrollView(slivers: []),
+        child: CustomScrollView(
+          slivers: [
+            SliverToBoxAdapter(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  children: [
+                    Column(
+                      spacing: 15,
+                      children: [
+                        TextFormField(
+                          decoration: InputDecoration(
+                            label: Text('Nome', style: Theme.of(context).textTheme.bodyLarge),
+                          ),
+                        ),
+                        TextFormField(
+                          decoration: InputDecoration(
+                            label: Text('E-mail', style: Theme.of(context).textTheme.bodyLarge),
+                          ),
+                        ),
+                        TextFormField(
+                          decoration: InputDecoration(
+                            label: Text('E-mail', style: Theme.of(context).textTheme.bodyLarge),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
