@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+import 'package:meu_estoque/ui/core/widgets/buttons/custom_button.dart';
 import './auth_option_controller.dart';
 
 class AuthOptionPage extends GetView<AuthOptionController> {
@@ -7,9 +8,6 @@ class AuthOptionPage extends GetView<AuthOptionController> {
 
   @override
   Widget build(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
-    final avatarRadius = screenWidth * 0.20;
-
     return Scaffold(
       body: SafeArea(
         child: Center(
@@ -17,18 +15,25 @@ class AuthOptionPage extends GetView<AuthOptionController> {
             spacing: 15,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              CircleAvatar(
-                radius: avatarRadius,
-                backgroundColor: Theme.of(context).colorScheme.primary,
-                child: Icon(
-                  Icons.person,
-                  size: avatarRadius,
-                  color: Theme.of(context).colorScheme.onPrimary,
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: SizedBox(
+                  width: double.infinity,
+                  child: CustomButton.primary(
+                    onPressed: () {},
+                    label: Text('Entrar com senha do dispositivo'),
+                  ),
                 ),
               ),
-              Text(
-                'Bem vindo(a)!',
-                style: Theme.of(context).textTheme.displaySmall,
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: SizedBox(
+                  width: double.infinity,
+                  child: CustomButton.secondary(
+                    onPressed: () {},
+                    label: Text('Entrar com senha do app'),
+                  ),
+                ),
               ),
             ],
           ),
