@@ -43,32 +43,16 @@ class LoginPage extends StatelessWidget {
                         Container(
                           alignment: Alignment.topLeft,
                           child: Text(
-                            'Informe seu E-mail e Senha para continuar',
-                            style: Theme.of(context).textTheme.bodySmall,
+                            'Bem vindo de volta!',
+                            style: Theme.of(context).textTheme.bodyMedium,
                           ),
                         ),
                         const SizedBox(height: 15),
                         LoginForm(controller: _controller),
-                        Container(
-                          alignment: Alignment.topRight,
-                          child: TextButton(
-                            onPressed: () {},
-                            child: Text(
-                              'Esqueci minha senha',
-                              style: Theme.of(context).textTheme.labelLarge?.copyWith(
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                        ),
                         Spacer(),
                         Column(
                           spacing: 10,
                           children: [
-                            Divider(
-                              height: 40,
-                              color: Theme.of(context).colorScheme.primaryFixed,
-                            ),
                             SizedBox(
                               width: double.infinity,
                               child: CustomButton.primary(
@@ -76,14 +60,37 @@ class LoginPage extends StatelessWidget {
                                   await _controller.login();
                                 },
                                 icon: Icon(Icons.login),
-                                label: Text('LOGIN'),
+                                label: Text('Login'),
                               ),
                             ),
+                            Row(
+                              children: [
+                                Expanded(
+                                  child: Container(
+                                    margin: const EdgeInsets.only(right: 15.0),
+                                    child: Divider(
+                                      height: 40,
+                                      color: Theme.of(context).colorScheme.primaryFixed,
+                                    ),
+                                  ),
+                                ),
+                                Text('ou'),
+                                Expanded(
+                                  child: Container(
+                                    margin: const EdgeInsets.only(left: 15.0),
+                                    child: Divider(
+                                      height: 40,
+                                      color: Theme.of(context).colorScheme.primaryFixed,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
                             TextButton(
-                              onPressed: () {},
+                              onPressed: _controller.goToRegisterPage,
                               child: Text(
-                                'CRIAR CONTA',
-                                style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                                'Criar uma conta',
+                                style: Theme.of(context).textTheme.labelMedium?.copyWith(
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
