@@ -33,6 +33,10 @@ class LoginController extends GetxController {
   final StreamController<LoginStates> _stateController = StreamController();
 
   final Rx<bool> _viewPassword = RxBool(true);
+  final Rx<bool> _keepSigned = RxBool(false);
+
+  bool get keepSigned => _keepSigned.value;
+
   final GlobalKey<FormState> formState = GlobalKey<FormState>();
 
   bool get viewPassword => _viewPassword.value;
@@ -54,6 +58,10 @@ class LoginController extends GetxController {
 
   void changePasswordVisibility() {
     _viewPassword.value = !_viewPassword.value;
+  }
+
+  void setKeepSigned(bool? value) {
+    _keepSigned.value = value ?? false;
   }
 
   bool _validateLogin() {
