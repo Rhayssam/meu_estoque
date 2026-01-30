@@ -23,8 +23,9 @@ class AppWidget extends StatelessWidget {
       locale: Locale('pt'),
       debugShowCheckedModeBanner: false,
       theme: AppTheme.light(),
-      initialRoute: Routes.dev,
+      // initialRoute: Routes.dev,
       // initialRoute: Routes.login,
+      initialRoute: Routes.splash,
       getPages: AppRouter.pages,
       unknownRoute: AppRouter.unknownRoutePage,
     );
