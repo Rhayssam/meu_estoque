@@ -49,7 +49,7 @@ final class AppTheme {
       iconSize: 24,
       padding: EdgeInsets.all(12),
       textStyle: textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.bold),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
     ),
   );
 
@@ -57,10 +57,10 @@ final class AppTheme {
     iconColor: colorScheme.onSurface,
     contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
     isDense: false,
-    border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(12))),
+    border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(25))),
     disabledBorder: OutlineInputBorder(
       borderSide: BorderSide(color: colorScheme.onSurface.withValues(alpha: 0.5)),
-      borderRadius: BorderRadius.all(Radius.circular(12)),
+      borderRadius: BorderRadius.all(Radius.circular(25)),
     ),
   );
 
