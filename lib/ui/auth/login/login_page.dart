@@ -87,7 +87,7 @@ class LoginPage extends StatelessWidget {
                               ],
                             ),
                             TextButton(
-                              onPressed: () {},
+                              onPressed: _controller.goToRegisterPage,
                               child: Text(
                                 'Criar uma conta',
                                 style: Theme.of(context).textTheme.labelMedium?.copyWith(
