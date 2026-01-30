@@ -9,6 +9,7 @@ import 'package:meu_estoque/data/repositories/auth/auth_repository.dart';
 import 'package:meu_estoque/data/services/local_storage/session/user_session_storage.dart';
 import 'package:meu_estoque/data/services/logger/logger.dart';
 import 'package:meu_estoque/domain/models/user_model.dart';
+import 'package:meu_estoque/routing/routes.dart';
 import 'package:meu_estoque/ui/auth/login/viewmodel/login_states.dart';
 import 'package:meu_estoque/ui/core/services/dialog_manager.dart';
 import 'package:meu_estoque/ui/core/services/loading_overlay_manager.dart';
@@ -110,6 +111,10 @@ class LoginController extends GetxController {
 
     LoadingOverlayManager.instance.hideLoading();
     result.fold<void>(_handleSuccess, _handleFailure);
+  }
+
+  Future<void> goToRegisterPage() async {
+    await Get.toNamed(Routes.register);
   }
 
   @override
