@@ -15,23 +15,33 @@ class LoginForm extends StatelessWidget {
     return Form(
       key: _controller.formState,
       child: Column(
-        spacing: 20,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Campo para digitar o email
           TextFormField(
             controller: _controller.emailEC,
             textInputAction: TextInputAction.next,
             keyboardType: TextInputType.emailAddress,
             decoration: InputDecoration(
               label: Text('E-mail', style: Theme.of(context).textTheme.bodyLarge),
-              prefixIcon: Icon(Icons.email),
             ),
             validator: Validatorless.multiple([
               Validatorless.required('E-mail Obrigatório'),
               Validatorless.email('E-mail inválido'),
             ]),
           ),
-          // Campo para digitar a senha
+          const SizedBox(height: 10),
+          Container(
+            alignment: Alignment.topRight,
+            child: TextButton(
+              onPressed: () {},
+              child: Text(
+                'Esqueceu a senha?',
+                style: Theme.of(context).textTheme.labelSmall?.copyWith(
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ),
           Obx(
             () {
               return TextFormField(
@@ -44,7 +54,6 @@ class LoginForm extends StatelessWidget {
                     'Senha',
                     style: Theme.of(context).textTheme.bodyLarge,
                   ),
-                  prefixIcon: Icon(Icons.lock),
                   suffixIcon: IconButton(
                     onPressed: () => _controller.changePasswordVisibility(),
                     icon: _controller.viewPassword ? Icon(Icons.visibility) : Icon(Icons.visibility_off),
@@ -54,6 +63,17 @@ class LoginForm extends StatelessWidget {
                 obscureText: _controller.viewPassword,
               );
             },
+          ),
+          Row(
+            children: [
+              Obx(() {
+                return Checkbox(
+                  value: _controller.keepSigned,
+                  onChanged: _controller.setKeepSigned,
+                );
+              }),
+              Text('Mantenha-me conectado'),
+            ],
           ),
         ],
       ),
