@@ -1,13 +1,15 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+import 'package:meu_estoque/ui/auth/register/widgets/register_form.dart';
 import 'package:meu_estoque/ui/core/widgets/app_bar/app_bar_back_button.dart';
 import 'package:meu_estoque/ui/core/widgets/app_bar/custom_sliver_app_bar.dart';
 import 'package:meu_estoque/ui/core/widgets/buttons/custom_button.dart';
 import 'package:meu_estoque/ui/core/widgets/copyright/copyright.dart';
 import 'viewmodel/register_controller.dart';
 
-class RegisterPage extends GetView<RegisterController> {
+class RegisterPage extends StatelessWidget {
   const RegisterPage({super.key});
+  RegisterController get _controller => Get.find<RegisterController>();
 
   @override
   Widget build(BuildContext context) {
@@ -33,52 +35,26 @@ class RegisterPage extends GetView<RegisterController> {
             SliverPadding(
               padding: const EdgeInsets.all(20),
               sliver: SliverToBoxAdapter(
-                child: Column(
-                  children: [
-                    Column(
-                      spacing: 15,
-                      children: [
-                        TextFormField(
-                          decoration: InputDecoration(
-                            label: Text('Nome', style: Theme.of(context).textTheme.bodyLarge),
-                          ),
-                        ),
-                        TextFormField(
-                          decoration: InputDecoration(
-                            label: Text('E-mail', style: Theme.of(context).textTheme.bodyLarge),
-                          ),
-                        ),
-                        TextFormField(
-                          decoration: InputDecoration(
-                            label: Text('Confirmar E-mail', style: Theme.of(context).textTheme.bodyLarge),
-                          ),
-                        ),
-                        TextFormField(
-                          decoration: InputDecoration(
-                            label: Text('Telefone', style: Theme.of(context).textTheme.bodyLarge),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+                child: RegisterForm(controller: _controller),
               ),
             ),
-            SliverPadding(
-              padding: const EdgeInsets.all(20),
-              sliver: SliverFillRemaining(
+            SliverFillRemaining(
+              hasScrollBody: false,
+              child: Padding(
+                padding: const EdgeInsets.all(20),
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
                   spacing: 20,
                   children: [
-                    Spacer(),
+                    const Divider(),
                     SizedBox(
                       width: double.infinity,
                       child: CustomButton.primary(
                         onPressed: () {},
-                        label: Text('Avançar'),
+                        label: const Text('Avançar'),
                       ),
                     ),
-                    Copyright(),
+                    const Copyright(),
                   ],
                 ),
               ),
