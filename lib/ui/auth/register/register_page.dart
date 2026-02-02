@@ -46,7 +46,9 @@ class RegisterPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.end,
                   spacing: 20,
                   children: [
-                    const Divider(),
+                    Divider(
+                      color: Theme.of(context).colorScheme.primaryFixed,
+                    ),
                     SizedBox(
                       width: double.infinity,
                       child: CustomButton.primary(
