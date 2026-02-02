@@ -18,6 +18,7 @@ class LoginForm extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           TextFormField(
+            onTapOutside: (event) => FocusManager.instance.primaryFocus?.unfocus(),
             controller: _controller.emailEC,
             textInputAction: TextInputAction.next,
             keyboardType: TextInputType.emailAddress,
@@ -45,6 +46,7 @@ class LoginForm extends StatelessWidget {
           Obx(
             () {
               return TextFormField(
+                onTapOutside: (event) => FocusManager.instance.primaryFocus?.unfocus(),
                 controller: _controller.passwordEC,
                 textInputAction: TextInputAction.done,
                 keyboardType: TextInputType.visiblePassword,
