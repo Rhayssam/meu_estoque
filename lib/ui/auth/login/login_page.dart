@@ -18,13 +18,13 @@ class LoginPage extends StatelessWidget {
       child: LoadingOverlay(
         child: Scaffold(
           body: SafeArea(
-            child: CustomScrollView(
-              physics: ScrollPhysics(),
-              slivers: [
-                SliverFillRemaining(
-                  hasScrollBody: false,
-                  child: Padding(
-                    padding: EdgeInsets.all(20),
+            child: Padding(
+              padding: const EdgeInsets.all(20),
+              child: CustomScrollView(
+                physics: ScrollPhysics(),
+                slivers: [
+                  SliverFillRemaining(
+                    hasScrollBody: false,
                     child: Column(
                       spacing: 5,
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -101,8 +101,8 @@ class LoginPage extends StatelessWidget {
                       ],
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ),
