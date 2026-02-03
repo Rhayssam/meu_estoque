@@ -20,7 +20,7 @@ class AppWidget extends StatelessWidget {
     return GetMaterialApp(
       title: AppConstants.appTitle,
       initialBinding: AppBindings(),
-      locale: Locale('pt'),
+      locale: const Locale('pt', 'BR'),
       debugShowCheckedModeBanner: false,
       theme: AppTheme.light(),
       // initialRoute: Routes.dev,
