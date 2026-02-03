@@ -55,6 +55,7 @@ class RegisterForm extends StatelessWidget {
               ConstrainedBox(
                 constraints: BoxConstraints(maxWidth: 80),
                 child: TextFormField(
+                  controller: _controller.ddiEC,
                   decoration: InputDecoration(
                     label: Text('DDI', style: Theme.of(context).textTheme.bodyLarge),
                     enabled: false,
