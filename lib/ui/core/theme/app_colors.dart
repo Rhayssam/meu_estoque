@@ -17,7 +17,7 @@ final class AppColors {
     surface: Color(0xFFF3F3F3),
     onSurface: Color(0xFF000000),
     primary: Color(0xFF1565C0),
-    onPrimary: Color(0xFF121212),
+    onPrimary: Color(0xFFF9F9F9),
     secondary: Color(0xFFFFFFFF),
     onSecondary: Color(0xFF000000),
     tertiary: Color(0xFF000000),
