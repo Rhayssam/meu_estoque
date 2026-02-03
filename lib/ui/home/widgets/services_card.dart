@@ -7,55 +7,41 @@ class ServicesCard extends StatelessWidget {
     super.key,
     required this.service,
     required this.onTap,
-    this.size = 120,
   });
 
   final ServicesEnum service;
   final void Function(ServicesEnum service) onTap;
-  final double size;
 
   @override
   Widget build(BuildContext context) {
-    final ThemeData theme = Theme.of(context);
+    final theme = Theme.of(context);
+
     return InkWell(
-      borderRadius: BorderRadius.circular(22),
+      borderRadius: BorderRadius.circular(16),
       onTap: () => onTap(service),
-      child: Container(
-        width: size,
-        height: size,
-        padding: const EdgeInsets.all(14),
-        decoration: BoxDecoration(
-          color: theme.colorScheme.primaryContainer,
-          borderRadius: BorderRadius.circular(22),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withValues(alpha: 0.1),
-              blurRadius: 5,
-              offset: const Offset(0, 2),
-            ),
-          ],
-        ),
+      child: SizedBox.expand(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          spacing: 8,
           children: [
-            CircleAvatar(
-              backgroundColor: theme.colorScheme.primaryFixed.withAlpha(40),
-              radius: 40,
+            Container(
+              decoration: BoxDecoration(
+                color: theme.colorScheme.secondaryContainer,
+                borderRadius: BorderRadius.circular(14),
+              ),
+              padding: const EdgeInsets.all(16),
               child: Icon(
                 service.icon,
-                size: 50,
-                color: theme.colorScheme.onPrimaryContainer,
+                size: 28,
+                color: theme.colorScheme.onSecondaryContainer,
               ),
             ),
-            const SizedBox(height: 12),
             Text(
               service.label,
               textAlign: TextAlign.center,
-              maxLines: 2,
-              overflow: TextOverflow.ellipsis,
-              style: theme.textTheme.titleMedium!.copyWith(
+              style: theme.textTheme.labelMedium?.copyWith(
+                color: theme.colorScheme.onPrimaryContainer,
                 fontWeight: FontWeight.bold,
-                color: theme.colorScheme.onTertiaryContainer,
               ),
             ),
           ],
