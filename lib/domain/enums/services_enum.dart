@@ -1,7 +1,7 @@
 import 'package:meu_estoque/routing/routes.dart';
 
 enum ServicesEnum {
-  products('Meus Produtos', Routes.productList),
+  products('Produtos', Routes.productList),
   sales('Vendas', Routes.sales),
   inventory('Estoque', Routes.sales),
   ;
