@@ -17,7 +17,8 @@ class SplashController extends GetxController with GetSingleTickerProviderStateM
 
     revealAnimation = CurvedAnimation(
       parent: animationController,
-      curve: Curves.easeInOut,
+      // curve: Curves.easeInOut,
+      curve: Curves.easeInOutCubic,
     );
 
     _startFlow();
