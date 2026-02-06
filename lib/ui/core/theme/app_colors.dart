@@ -14,7 +14,7 @@ final class AppColors {
     onSecondaryFixed: onSecondaryFixed,
     tertiaryFixed: tertiaryFixed,
     onTertiaryFixed: onTertiaryFixed,
-    surface: Color(0xFFF3F3F3),
+    surface: Color(0xFFE0E0E0),
     onSurface: Color(0xFF000000),
     primary: Color(0xFF1565C0),
     onPrimary: Color(0xFFF9F9F9),
