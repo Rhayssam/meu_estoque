@@ -28,7 +28,7 @@ class HomePage extends StatelessWidget {
             ],
           ),
           backgroundColor: Theme.of(context).colorScheme.primaryContainer,
-          drawer: HomeDrawer(),
+          endDrawer: HomeDrawer(),
           body: SafeArea(
             child: CustomScrollView(
               scrollDirection: Axis.vertical,
@@ -78,10 +78,17 @@ class HomePage extends StatelessWidget {
                                     ],
                                     borderRadius: BorderRadius.circular(18),
                                   ),
-                                  padding: EdgeInsets.all(12),
-                                  child: Icon(
-                                    Icons.notifications,
-                                    color: theme.colorScheme.onSecondaryContainer,
+                                  padding: EdgeInsets.all(6),
+                                  child: Builder(
+                                    builder: (context) {
+                                      return IconButton(
+                                        onPressed: () {
+                                          Scaffold.of(context).openEndDrawer();
+                                        },
+                                        icon: const Icon(Icons.notifications),
+                                        color: theme.colorScheme.onSecondaryContainer,
+                                      );
+                                    },
                                   ),
                                 ),
                               ],
@@ -156,30 +163,25 @@ class HomePage extends StatelessWidget {
                                     ],
                                   ),
                                   Container(
-                                    padding: EdgeInsets.all(15),
                                     decoration: BoxDecoration(
-                                      color: theme.colorScheme.onPrimary,
+                                      color: theme.colorScheme.secondary,
                                       borderRadius: BorderRadius.circular(15),
                                     ),
-                                    child: Row(
-                                      spacing: 5,
-                                      children: [
-                                        Icon(Icons.favorite),
-                                        Column(
-                                          crossAxisAlignment: CrossAxisAlignment.start,
-                                          children: [
-                                            Text(
-                                              'Produto Cadastrado',
-                                              style: theme.textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold),
-                                            ),
-                                            Text(
-                                              'Um novo produto foi cadastrado',
-                                              style: theme.textTheme.labelMedium,
-                                            ),
-                                          ],
-                                        ),
-                                        Icon(Icons.more),
-                                      ],
+                                    child: ListTile(
+                                      leading: Icon(Icons.favorite),
+                                      title: Text(
+                                        'Produto Cadastrado',
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: theme.textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold),
+                                      ),
+                                      subtitle: Text(
+                                        'Um novo produto foi cadastradodasdasdsadadasdasdas',
+                                        maxLines: 2,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: theme.textTheme.labelMedium,
+                                      ),
+                                      trailing: Icon(Icons.more),
                                     ),
                                   ),
                                 ],
