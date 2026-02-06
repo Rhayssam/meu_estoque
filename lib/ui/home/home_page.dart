@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:get/get_connect/http/src/utils/utils.dart';
-import 'package:meu_estoque/ui/core/widgets/app_bar/custom_sliver_app_bar.dart';
 import 'package:meu_estoque/ui/core/widgets/double_click_to_exit/double_click_to_exit.dart';
 import 'package:meu_estoque/ui/home/viewmodel/home_controller.dart';
 import 'package:meu_estoque/ui/home/widgets/drawer/home_drawer.dart';
-import 'package:meu_estoque/ui/home/widgets/home_header.dart';
 import 'package:meu_estoque/ui/home/widgets/services.dart';
 
 class HomePage extends StatelessWidget {
@@ -136,9 +133,10 @@ class HomePage extends StatelessWidget {
                           ),
                           child: Container(
                             padding: const EdgeInsets.all(25),
-                            color: theme.colorScheme.onPrimary,
+                            color: theme.colorScheme.surface,
                             child: Center(
                               child: Column(
+                                spacing: 15,
                                 children: [
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -157,17 +155,32 @@ class HomePage extends StatelessWidget {
                                       ),
                                     ],
                                   ),
-                                  ListTile(
-                                    title: Text('Produto Cadastrado'),
-                                    leading: Icon(Icons.toys),
-                                    onTap: () {},
-                                    subtitle: Text('data'),
-                                  ),
-                                  ListTile(
-                                    title: Text('Produto Cadastrado'),
-                                    leading: Icon(Icons.toys),
-                                    onTap: () {},
-                                    subtitle: Text('data'),
+                                  Container(
+                                    padding: EdgeInsets.all(15),
+                                    decoration: BoxDecoration(
+                                      color: theme.colorScheme.onPrimary,
+                                      borderRadius: BorderRadius.circular(15),
+                                    ),
+                                    child: Row(
+                                      spacing: 5,
+                                      children: [
+                                        Icon(Icons.favorite),
+                                        Column(
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Text(
+                                              'Produto Cadastrado',
+                                              style: theme.textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold),
+                                            ),
+                                            Text(
+                                              'Um novo produto foi cadastrado',
+                                              style: theme.textTheme.labelMedium,
+                                            ),
+                                          ],
+                                        ),
+                                        Icon(Icons.more),
+                                      ],
+                                    ),
                                   ),
                                 ],
                               ),
