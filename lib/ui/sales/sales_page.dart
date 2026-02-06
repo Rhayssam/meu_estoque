@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:meu_estoque/ui/core/widgets/app_bar/app_bar_back_button.dart';
+import 'package:meu_estoque/ui/core/widgets/app_bar/custom_sliver_app_bar.dart';
 
 class SalesPage extends StatelessWidget {
   const SalesPage({super.key});
@@ -6,10 +9,22 @@ class SalesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('SalesPage'),
+      body: CustomScrollView(
+        slivers: [
+          CustomSliverAppBar.primary(
+            title: Text('Produtos'),
+            leading: AppBarBackButton(onPressed: Get.back),
+          ),
+          SliverToBoxAdapter(
+            child: Column(
+              children: [
+                Text('data'),
+                Text('data'),
+              ],
+            ),
+          ),
+        ],
       ),
-      body: Container(),
     );
   }
 }
