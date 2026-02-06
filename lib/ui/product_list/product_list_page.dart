@@ -27,7 +27,7 @@ class ProductListPage extends StatelessWidget {
       ),
       body: CustomScrollView(
         slivers: [
-          CustomSliverAppBar.surface(
+          CustomSliverAppBar.primary(
             title: Text('Produtos'),
             leading: AppBarBackButton(onPressed: Get.back),
           ),
