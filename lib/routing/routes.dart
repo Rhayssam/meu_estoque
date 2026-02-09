@@ -10,6 +10,9 @@ final class Routes {
   static const String productAdd = '/product/add';
   static const String sales = '/sales';
   static const String inventory = '/inventory';
+  static const String homeDashboard = '/home/dashboard';
+  static const String profile = '/home/profile';
+  static const String relatory = '/home/relatory';
 
   static const String notFound = '/';
 }
