@@ -44,6 +44,13 @@ class HomeContent extends StatelessWidget {
                   decoration: BoxDecoration(
                     color: theme.colorScheme.secondary,
                     borderRadius: BorderRadius.circular(15),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black12,
+                        offset: Offset(0, 2),
+                        blurRadius: 4,
+                      ),
+                    ],
                   ),
                   child: ListTile(
                     leading: Icon(Icons.favorite),
