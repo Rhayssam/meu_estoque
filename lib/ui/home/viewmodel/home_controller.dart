@@ -7,6 +7,7 @@ import 'package:meu_estoque/ui/home/viewmodel/home_states.dart';
 
 class HomeController extends GetxController {
   final StreamController<HomeStates> _homeStateController = StreamController<HomeStates>.broadcast();
+  final RxInt currentIndex = 0.obs;
 
   final Rx<HomeStates> _homeState = Rx<HomeStates>(HomeInitialState());
 
@@ -18,6 +19,10 @@ class HomeController extends GetxController {
   void onInit() {
     _homeState.bindStream(_homeStateController.stream);
     super.onInit();
+  }
+
+  void changeTab(int index) {
+    currentIndex.value = index;
   }
 
   void goToAboutUsPage() {

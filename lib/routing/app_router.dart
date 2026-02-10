@@ -8,6 +8,8 @@ import 'package:meu_estoque/ui/auth/login/login_bindings.dart';
 import 'package:meu_estoque/ui/auth/login/login_page.dart';
 import 'package:meu_estoque/ui/auth/register/register_bindings.dart';
 import 'package:meu_estoque/ui/auth/register/register_page.dart';
+import 'package:meu_estoque/ui/home_dashboard/home_dashboard_bindings.dart';
+import 'package:meu_estoque/ui/home_dashboard/home_dashboard_page.dart';
 import 'package:meu_estoque/ui/inventory/inventory_bindings.dart';
 import 'package:meu_estoque/ui/inventory/inventory_page.dart';
 import 'package:meu_estoque/ui/product_add/product_add_bindings.dart';
@@ -17,6 +19,10 @@ import 'package:meu_estoque/ui/product_list/product_list_page.dart';
 import 'package:meu_estoque/ui/dev/dev_page.dart';
 import 'package:meu_estoque/ui/home/home_bindings.dart';
 import 'package:meu_estoque/ui/home/home_page.dart';
+import 'package:meu_estoque/ui/profile/profile_bindings.dart';
+import 'package:meu_estoque/ui/profile/profile_page.dart';
+import 'package:meu_estoque/ui/relatory/relatory_bindings.dart';
+import 'package:meu_estoque/ui/relatory/relatory_page.dart';
 import 'package:meu_estoque/ui/sales/sales_bindings.dart';
 import 'package:meu_estoque/ui/sales/sales_page.dart';
 import 'package:meu_estoque/ui/splash/splash_bindings.dart';
@@ -77,6 +83,21 @@ final class AppRouter {
       name: Routes.inventory,
       binding: InventoryBindings(),
       page: () => InventoryPage(),
+    ),
+    GetPage(
+      name: Routes.homeDashboard,
+      binding: HomeDashboardBindings(),
+      page: () => HomeDashboardPage(),
+    ),
+    GetPage(
+      name: Routes.relatory,
+      binding: RelatoryBindings(),
+      page: () => RelatoryPage(),
+    ),
+    GetPage(
+      name: Routes.profile,
+      binding: ProfileBindings(),
+      page: () => ProfilePage(),
     ),
   ];
   static final GetPage unknownRoutePage = GetPage(
