@@ -47,6 +47,7 @@ class HomePage extends StatelessWidget {
               backgroundColor: theme.colorScheme.primary,
               selectedItemColor: theme.colorScheme.onPrimary,
               unselectedItemColor: theme.colorScheme.onPrimary.withAlpha(60),
+              iconSize: 30,
               items: const [
                 BottomNavigationBarItem(icon: Icon(Icons.home_rounded), label: ''),
                 BottomNavigationBarItem(icon: Icon(Icons.store_rounded), label: ''),
