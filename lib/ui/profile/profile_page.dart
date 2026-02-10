@@ -47,6 +47,29 @@ class ProfilePage extends GetView<ProfileController> {
                 ],
               ),
             ),
+            const SizedBox(height: 30),
+            Material(
+              color: theme.colorScheme.secondary,
+              child: InkWell(
+                onTap: () {},
+                child: Container(
+                  padding: EdgeInsets.all(18),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Meu Perfil',
+                        style: theme.textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold),
+                      ),
+                      Icon(
+                        Icons.arrow_forward_ios_rounded,
+                        size: 18,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),
