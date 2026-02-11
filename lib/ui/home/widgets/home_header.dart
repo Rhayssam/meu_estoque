@@ -61,7 +61,7 @@ class HomeHeader extends StatelessWidget {
                       onPressed: () {
                         Scaffold.of(context).openEndDrawer();
                       },
-                      icon: const Icon(Icons.notifications),
+                      icon: const Icon(Icons.menu_rounded),
                       color: theme.colorScheme.onSecondaryContainer,
                     );
                   },
