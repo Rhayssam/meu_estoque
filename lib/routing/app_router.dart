@@ -8,6 +8,8 @@ import 'package:meu_estoque/ui/auth/login/login_bindings.dart';
 import 'package:meu_estoque/ui/auth/login/login_page.dart';
 import 'package:meu_estoque/ui/auth/register/register_bindings.dart';
 import 'package:meu_estoque/ui/auth/register/register_page.dart';
+import 'package:meu_estoque/ui/help/help_bindings.dart';
+import 'package:meu_estoque/ui/help/help_page.dart';
 import 'package:meu_estoque/ui/home_dashboard/home_dashboard_bindings.dart';
 import 'package:meu_estoque/ui/home_dashboard/home_dashboard_page.dart';
 import 'package:meu_estoque/ui/inventory/inventory_bindings.dart';
@@ -21,12 +23,18 @@ import 'package:meu_estoque/ui/home/home_bindings.dart';
 import 'package:meu_estoque/ui/home/home_page.dart';
 import 'package:meu_estoque/ui/profile/profile_bindings.dart';
 import 'package:meu_estoque/ui/profile/profile_page.dart';
+import 'package:meu_estoque/ui/profile_info/profile_info_bindings.dart';
+import 'package:meu_estoque/ui/profile_info/profile_info_page.dart';
 import 'package:meu_estoque/ui/relatory/relatory_bindings.dart';
 import 'package:meu_estoque/ui/relatory/relatory_page.dart';
 import 'package:meu_estoque/ui/sales/sales_bindings.dart';
 import 'package:meu_estoque/ui/sales/sales_page.dart';
+import 'package:meu_estoque/ui/settings/settings_bindings.dart';
+import 'package:meu_estoque/ui/settings/settings_page.dart';
 import 'package:meu_estoque/ui/splash/splash_bindings.dart';
 import 'package:meu_estoque/ui/splash/splash_page.dart';
+import 'package:meu_estoque/ui/store/store_bindings.dart';
+import 'package:meu_estoque/ui/store/store_page.dart';
 
 final class AppRouter {
   static final List<GetPage> pages = [
@@ -94,10 +102,32 @@ final class AppRouter {
       binding: RelatoryBindings(),
       page: () => RelatoryPage(),
     ),
+
+    // Profile
     GetPage(
       name: Routes.profile,
       binding: ProfileBindings(),
       page: () => ProfilePage(),
+    ),
+    GetPage(
+      name: Routes.profileInfo,
+      binding: ProfileInfoBindings(),
+      page: () => ProfileInfoPage(),
+    ),
+    GetPage(
+      name: Routes.store,
+      binding: StoreBindings(),
+      page: () => StorePage(),
+    ),
+    GetPage(
+      name: Routes.settings,
+      binding: SettingsBindings(),
+      page: () => SettingsPage(),
+    ),
+    GetPage(
+      name: Routes.help,
+      binding: HelpBindings(),
+      page: () => HelpPage(),
     ),
   ];
   static final GetPage unknownRoutePage = GetPage(

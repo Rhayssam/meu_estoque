@@ -11,8 +11,14 @@ final class Routes {
   static const String sales = '/sales';
   static const String inventory = '/inventory';
   static const String homeDashboard = '/home/dashboard';
-  static const String profile = '/home/profile';
   static const String relatory = '/home/relatory';
+
+  // Profile
+  static const String profile = '/home/profile';
+  static const String profileInfo = '/profile/profileInfo';
+  static const String store = '/profile/store';
+  static const String settings = '/profile/settings';
+  static const String help = '/profile/help';
 
   static const String notFound = '/';
 }
