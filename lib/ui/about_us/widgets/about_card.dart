@@ -4,45 +4,58 @@ class AboutCard extends StatelessWidget {
   const AboutCard({
     super.key,
     required this.title,
-    required this.subtitle,
+    required this.contents,
   });
 
   final String title;
-  final String subtitle;
+  final List<String> contents;
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+
     return Container(
       width: double.infinity,
       decoration: BoxDecoration(
-        color: Theme.of(context).colorScheme.primaryContainer,
+        color: theme.colorScheme.secondary,
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.1),
+            color: Colors.black12.withAlpha(10),
             blurRadius: 5,
-            offset: Offset(0, 2),
+            offset: const Offset(0, 1),
           ),
         ],
-        borderRadius: BorderRadius.all(Radius.circular(15)),
+        borderRadius: BorderRadius.circular(15),
       ),
-      child: Padding(
-        padding: const EdgeInsets.all(10),
-        child: Column(
-          children: [
-            Text(
-              title,
-              style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                color: Theme.of(context).colorScheme.onPrimaryContainer,
-                fontWeight: FontWeight.bold,
-              ),
+      padding: const EdgeInsets.all(10),
+      child: Column(
+        spacing: 8,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            title,
+            style: theme.textTheme.titleLarge?.copyWith(
+              color: theme.colorScheme.onSecondary,
+              fontWeight: FontWeight.bold,
             ),
-            Divider(
-              thickness: 0.3,
-              color: Theme.of(context).colorScheme.primaryFixed,
-            ),
-            Text(subtitle),
-          ],
-        ),
+          ),
+          Divider(
+            thickness: 0.3,
+            color: theme.colorScheme.primaryFixed,
+          ),
+          ...contents.map(
+            (text) => _contentParagraph(theme, text),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _contentParagraph(ThemeData theme, String text) {
+    return Text(
+      text,
+      style: theme.textTheme.bodyMedium?.copyWith(
+        color: theme.colorScheme.onSecondary,
       ),
     );
   }
