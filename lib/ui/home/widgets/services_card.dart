@@ -26,6 +26,13 @@ class ServicesCard extends StatelessWidget {
           children: [
             Container(
               decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withValues(alpha: 0.1),
+                    blurRadius: 5,
+                    offset: const Offset(0, 2),
+                  ),
+                ],
                 color: theme.colorScheme.secondaryContainer,
                 borderRadius: BorderRadius.circular(14),
               ),
