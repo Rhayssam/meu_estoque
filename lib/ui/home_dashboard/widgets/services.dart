@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:meu_estoque/domain/enums/services_enum.dart';
 import 'package:meu_estoque/ui/home/viewmodel/home_controller.dart';
 import 'package:meu_estoque/ui/home/viewmodel/home_states.dart';
-import 'package:meu_estoque/ui/home/widgets/services_card.dart';
+import 'package:meu_estoque/ui/home_dashboard/widgets/services_card.dart';
 
 class Services extends StatelessWidget {
   const Services({

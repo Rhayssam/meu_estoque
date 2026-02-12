@@ -4,6 +4,7 @@ enum ProfileOptionsEnum {
   myProfile('Meu Perfil', Routes.profileInfo),
   relatory('Minha Loja', Routes.store),
   settings('Preferências', Routes.settings),
+  about('Sobre', Routes.about),
   help('Ajuda', Routes.help),
   ;
 

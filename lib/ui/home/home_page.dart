@@ -4,7 +4,7 @@ import 'package:flutter_floating_bottom_bar/flutter_floating_bottom_bar.dart';
 import 'package:get/get.dart';
 import 'package:meu_estoque/ui/core/widgets/double_click_to_exit/double_click_to_exit.dart';
 import 'package:meu_estoque/ui/home/viewmodel/home_controller.dart';
-import 'package:meu_estoque/ui/home/widgets/drawer/home_drawer.dart';
+import 'package:meu_estoque/ui/home_dashboard/widgets/drawer/home_drawer.dart';
 import 'package:meu_estoque/ui/home_dashboard/home_dashboard_page.dart';
 import 'package:meu_estoque/ui/profile/profile_page.dart';
 import 'package:meu_estoque/ui/relatory/relatory_page.dart';

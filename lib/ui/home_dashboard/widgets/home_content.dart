@@ -12,8 +12,8 @@ class HomeContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return ClipRRect(
       borderRadius: BorderRadiusGeometry.only(
-        topLeft: Radius.circular(25),
-        topRight: Radius.circular(25),
+        topLeft: Radius.elliptical(50, 15),
+        topRight: Radius.elliptical(50, 15),
       ),
       child: Container(
         padding: const EdgeInsets.all(25),
