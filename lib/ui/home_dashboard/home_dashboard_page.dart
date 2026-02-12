@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:meu_estoque/ui/home/viewmodel/home_controller.dart';
-import 'package:meu_estoque/ui/home/widgets/home_content.dart';
-import 'package:meu_estoque/ui/home/widgets/home_header.dart';
+import 'package:meu_estoque/ui/home_dashboard/widgets/home_content.dart';
+import 'package:meu_estoque/ui/home_dashboard/widgets/home_header.dart';
 
 class HomeDashboardPage extends StatelessWidget {
   const HomeDashboardPage({super.key});

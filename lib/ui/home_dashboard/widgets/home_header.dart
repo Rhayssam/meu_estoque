@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meu_estoque/ui/home/viewmodel/home_controller.dart';
-import 'package:meu_estoque/ui/home/widgets/services.dart';
+import 'package:meu_estoque/ui/home_dashboard/widgets/services.dart';
 
 class HomeHeader extends StatelessWidget {
   const HomeHeader({
